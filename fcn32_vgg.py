@@ -18,9 +18,9 @@ class FCN32VGG:
     def __init__(self, vgg16_npy_path=None):
         if vgg16_npy_path is None:
             path = sys.modules[self.__class__.__module__].__file__
-            # print path
+            # print(path)
             path = os.path.abspath(os.path.join(path, os.pardir))
-            # print path
+            # print(path)
             path = os.path.join(path, "vgg16.npy")
             vgg16_npy_path = path
             logging.info("Load npy file from '%s'.", vgg16_npy_path)
